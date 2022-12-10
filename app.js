@@ -7,7 +7,6 @@ let dotenv = require("dotenv").config();
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const team1Router = require('./routes/team1.1');
 const GraphDB = require("./util/GraphDB.js");
 
 let app = express();
@@ -24,7 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/team1.1', team1Router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
